@@ -5,7 +5,7 @@
       class="webp-images"
       value="<?php echo esc_attr($key . $id_spliter . $query_images->post->ID); ?>"
     />
-    <?php echo $value['file']; ?>
+    <?php echo esc_html($value['file']); ?>
   </label>
   <span
     class="webp-status-image"

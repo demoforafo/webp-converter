@@ -9,7 +9,7 @@
         <a href="javascript:webpConverterInit()" class="button button-green button-ap-large"><?php _e('Start WEBP Image Converter', 'webp-converter');?></a>
     </div>
 <?php
-$paged = isset($_GET['paged']) ? $_GET['paged'] : 1;
+$paged = isset($_GET['paged']) ? (int) sanitize_text_field($_GET['paged']) : 1;
 $query_images_args = array(
     'post_type' => 'attachment',
     'post_mime_type' => 'image',
